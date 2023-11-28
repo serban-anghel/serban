@@ -57,6 +57,7 @@ class ProductResource extends Resource
 
                                     $set('slug', Str::slug($state));
                                 }),
+
                             TextInput::make('slug')
                                 ->disabled()
                                 ->dehydrated()
