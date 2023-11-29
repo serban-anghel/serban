@@ -63,8 +63,6 @@ class CategoryResource extends Resource
             ]);
     }
  /// dev
-    ///
-    /// //dsssd
     public static function table(Table $table): Table
     {
         return $table
