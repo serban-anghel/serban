@@ -62,7 +62,7 @@ class CategoryResource extends Resource
                     ])
             ]);
     }
-
+ /// dev
     public static function table(Table $table): Table
     {
         return $table
