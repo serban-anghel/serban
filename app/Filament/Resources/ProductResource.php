@@ -69,7 +69,7 @@ class ProductResource extends Resource
                     Section::make('Pricing & Inventory')
                     ->schema([
                         TextInput::make('sku')
-                            ->label('SKU (Stock Keeping Unit')
+                            ->label('SKU (Stock Keeping Unit)')
                             ->unique(ignoreRecord: true)
                             ->required(),
                         TextInput::make('price')
