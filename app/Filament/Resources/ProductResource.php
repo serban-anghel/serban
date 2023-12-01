@@ -72,15 +72,18 @@ class ProductResource extends Resource
                             ->label('SKU (Stock Keeping Unit)')
                             ->unique(ignoreRecord: true)
                             ->required(),
+
                         TextInput::make('price')
                             ->numeric()
                             ->rules('regex:/^\d{1,6}(\.\d{0,2})?$/')
                             ->required(),
+
                         TextInput::make('quantity')
                             ->numeric()
                             ->minValue(0)
                             ->maxValue(100)
                             ->required(),
+
                         Select::make('type')
                             ->options([
                                 'downloadable' => ProductTypeEnum::DOWNLOADABLE->value,
@@ -88,6 +91,7 @@ class ProductResource extends Resource
                             ])->required()
                     ])->columns(2)
                 ]),
+
                 Group::make()
                 ->schema([
                     Section::make('Status')
